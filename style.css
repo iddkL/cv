@@ -1,0 +1,112 @@
+:root{
+	--bg: #f7f8fb;
+	--card: #ffffff;
+	--muted: #6b7280;
+	--accent: #2563eb;
+	--accent-2: #0ea5a4;
+	--text: #0f172a;
+	--glass: rgba(15,23,42,0.04);
+}
+
+*{box-sizing:border-box}
+body{
+	margin:0;
+	font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background:var(--bg);
+	color:var(--text);
+	line-height:1.45;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	padding:24px;
+}
+
+main{
+	max-width:920px;
+	margin:20px auto;
+	padding:24px;
+	background:linear-gradient(180deg, transparent, rgba(0,0,0,0.01));
+	border-radius:10px;
+}
+
+header{
+	text-align:center;
+	margin-bottom:20px;
+	padding:18px;
+	background:var(--card);
+	border-radius:10px;
+	box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+h1{margin:0;font-size:1.8rem; letter-spacing: -0.5px}
+h2{margin:6px 0 14px;color:var(--muted);font-weight:600}
+header p{margin-top:12px}
+header img{
+	vertical-align:middle;
+	border-radius:8px;
+	transition:transform .18s ease;
+	/* إزالة أي حدود ظاهرية حول الصور */
+	border: 0;
+}
+header a:hover img{transform:translateY(-4px)}
+
+section{
+	background:var(--card);
+	padding:18px;
+	margin-bottom:14px;
+	border-radius:8px;
+	box-shadow: 0 4px 12px rgba(16,24,40,0.04);
+}
+section h2{margin-top:0;font-size:1.1rem;color:var(--accent)}
+
+#education ul, #skills ul, #certifications ol{
+	padding-left:1.2rem;
+	margin:8px 0 0 0;
+}
+#education p, #skills li, #certifications li{
+	color:var(--muted);
+	margin:6px 0;
+}
+
+#skills ul{
+	display:flex;
+	flex-wrap:wrap;
+	gap:8px;
+	list-style:none;
+	padding:0;
+}
+#skills li{
+	background:var(--glass);
+	padding:6px 10px;
+	border-radius:999px;
+	font-weight:600;
+	color:var(--text);
+	font-size:.95rem;
+}
+
+#location iframe{
+	width:100%;
+	height:280px;
+	border-radius:6px;
+	border:0;
+	box-shadow: 0 6px 14px rgba(16,24,40,0.06);
+}
+
+footer{
+	text-align:center;
+	margin-top:18px;
+	color:var(--muted);
+	font-size:0.95rem;
+}
+footer nav a{
+	color:var(--muted);
+	text-decoration:none;
+	margin:0 6px;
+	transition:color .15s ease;
+}
+footer nav a:hover{color:var(--accent)}
+
+@media (max-width:600px){
+	body{padding:12px}
+	main{padding:12px}
+	header h1{font-size:1.4rem}
+	#location iframe{height:200px}
+}
